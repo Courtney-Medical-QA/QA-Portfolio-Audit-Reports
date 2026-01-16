@@ -1,0 +1,26 @@
+Bug Report #1: Compliance & Logic Inconsistency
+Title: Mismatch between App Store Age Rating (4+) and Registration Requirements (18+)
+• Severity: Medium (Legal/Compliance risk)
+• Priority: High (Needs to be addressed to avoid misleading potential users)
+• Environment: iPhone 16, iOS 18.2, UserTesting Mobile App v4.5
+• Description: There is a logical conflict between the public storefront marketing and the legal Terms of Service (TOS). The App Store permits downloads for ages 4+, but the app's internal logic blocks anyone under 18 from creating an account.
+Steps to Reproduce:
+1. Navigate to the UserTesting app on the Apple App Store (Observe 4+ rating).
+2. Download and launch the application.
+3. Attempt to register a new account (Observe 18+ requirement prompt).
+• Expected Result: App Store age rating should align with the legal TOS (e.g., 17+) to ensure only eligible users spend time/data downloading the app.
+• Actual Result: Storefront allows ineligible minors to download software they are legally barred from using.
+• Authentic Perspective (User Impact): This creates a "frustration loop" for users who think they can join, only to be rejected after the effort of downloading.
+Bug Report #2: UI/UX Data Constraint
+Title: Privacy Selection Conflict: Radio Button constraint on multi-factor PII categories
+• Severity: Low (Usability issue)
+• Priority: Medium (Affects the quality of user feedback data)
+• Environment: MacBook Air M3, macOS Sequoia, Google Chrome v131
+• Description: During the "Privacy Check" task, users are asked to identify sensitive information they are uncomfortable sharing. The system lists multiple valid PII (Personally Identifiable Information) categories, such as "Financial Info" and "Home Address," but uses radio buttons that restrict the user to only one choice.
+Steps to Reproduce:
+1. Access the Registration/Privacy Check flow on a desktop browser.
+2. Locate the question regarding sensitive data sharing.
+3. Attempt to select both "Financial Information" and "Home Address".
+• Expected Result: Selection should use Checkboxes to allow users to identify all applicable privacy concerns.
+• Actual Result: Radio buttons force an artificial choice between two equally sensitive categories, resulting in incomplete data for the researcher.
+• Medical QA Insight: In a clinical or medical setting, forcing a choice between two critical data points could lead to significant documentation errors.
